@@ -6,6 +6,18 @@ export default defineConfig({
   plugins: [react()],
   base: '/', // important for routing
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    chunkSizeWarningLimit: 2000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
+          stripe: ['@stripe/react-stripe-js', '@stripe/stripe-js'],
+          motion: ['framer-motion', 'motion']
+        }
+      }
+    }
   }
 })
