@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEye, FaEyeSlash, FaCarSide, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaCarSide, FaFacebook, FaTwitter, FaInstagram, FaUser } from 'react-icons/fa';
 import { useAppContext } from '../context/AppContext';
 import toast from 'react-hot-toast';
 
